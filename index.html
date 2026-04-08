@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tax Calculator</title>
+</head>
+<body>
+    <h1>Tax Calculator</h1>
+
+    <label>Your Total Income:</label><br>
+    <input type="number" id="income"><br><br>
+
+    <label>Tax Rate (%):</label><br>
+    <input type="number" id="rate"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calculate() {
+            let income = document.getElementById("income").value;
+            let rate = document.getElementById("rate").value;
+            let tax = income * rate / 100;
+            document.getElementById("result").innerText =
+                "Taxable Income: " + income + " | Tax Due: " + tax;
+        }
+    </script>
+</body>
+</html>
